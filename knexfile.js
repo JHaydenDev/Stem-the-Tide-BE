@@ -1,30 +1,34 @@
-require('dotenv').config();
+// Update with your config settings.
+
+require("dotenv").config();
 
 module.exports = {
   development: {
-    client: 'pg',
+    client: "pg",
     connection: process.env.DB_URL,
     migrations: {
-      directory: './data/migrations',
+      directory: "./data/migrations"
     },
-    seeds: { directory: './data/seeds' },
-  },
-
-  testing: {
-    client: 'pg',
-    connection: process.env.DB_URL,
-    migrations: {
-      directory: './data/migrations',
-    },
-    seeds: { directory: './data/seeds' },
+    seeds: { directory: "./data/seeds" }
   },
 
   production: {
-    client: 'pg',
-    connection: process.env.DB_URL,
-    migrations: {
-      directory: './data/migrations',
+    client: "pg",
+    connection: {
+      database: process.env.DATABASE_URL
     },
-    seeds: { directory: './data/seeds' },
-  },
+    pool: {
+      min: 2,
+      max: 100
+    },
+    migrations: {
+      tableName: "knex_migrations"
+    },
+    migrations: {
+      directory: "./data/migrations"
+    },
+    seeds: {
+      directory: "./data/seeds"
+    }
+  }
 };
