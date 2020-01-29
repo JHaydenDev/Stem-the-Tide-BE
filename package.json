@@ -1,0 +1,17 @@
+{
+  "name": "Stem-the-Tide-BE",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JHaydenDev/Stem-the-Tide-BE.git",
+  "author": "JHaydenDev <34730927+JHaydenDev@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.8",
+    "nodejs": "^0.0.0",
+    "nodemon": "^2.0.2",
+    "pg": "^7.17.1"
+  }
+}
