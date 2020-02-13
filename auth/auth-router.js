@@ -29,9 +29,32 @@ router.post("/register", (req, res) => {
       errors: validateResult.errors
     });
   }
+
+  // switch (validateResult.isSuccessful) {
+  //   case true:
+  //     const hash = bcrypt.hashSync(user.password, 11);
+  //     user.password = hash;
+
+  //     Users.add(user)
+  //       .then(saved => {
+  //         res.status(201).json(saved);
+  //       })
+  //       .catch(error => {
+  //         res.status(error).json(error);
+  //       });
+  //     break;
+  //   case false:
+  //     res.status(400).json({
+  //       message: "Invalid information",
+  //       errors: validateResult.errors
+  //     });
+  //     break;
+  //   default:
+  //     res.status(500).json(error);
+  // }
 });
 
-//Logins in User with token
+//Logins with token
 router.post("/login", (req, res) => {
   const validateResult = validateUser(req.body);
 
