@@ -1,3 +1,4 @@
+
 module.exports = {
-    jwtSecret: process.env.JWT_SECRET || 'add a third table for many to many',
-  };
+  JWT_SECRET: process.env.JWT_SECRET || 'Lets get this thing working'
+}
